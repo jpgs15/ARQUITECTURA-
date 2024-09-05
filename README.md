@@ -67,5 +67,7 @@ c1, c2 y c3 se utilizan para conectar los acarreos entre los sumadores.
   -sum1b s2 (.A(A[2]), .B(B[2]), .Ci(c2), .Cout(c3) ,.Sum(Sum[2]));  
   -sum1b s3 (.A(A[3]), .B(B[3]), .Ci(c3), .Cout(Cout) ,.Sum(Sum[3]));     
 
-El sumador de 4 bits se construye utilizando cuatro instancias del módulo sum1b, que implementa un sumador completo de 1 bit.
+El sumador de 4 bits se construye utilizando cuatro instancias del módulo sum1b, que implementa un sumador completo de 1 bit.           
+
+ste diseño implementa un sumador en cadena. La suma comienza en el bit menos significativo (A[0] y B[0]), y el acarreo resultante de esta suma (c1) se pasa al siguiente bit (A[1] y B[1]). Esto se repite para todos los bits, hasta llegar al bit más significativo (A[3] y B[3]), donde el acarreo de salida final (Cout) es generado.
 
