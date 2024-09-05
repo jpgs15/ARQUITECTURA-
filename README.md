@@ -1,2 +1,3 @@
 ## integrantes
-Juan Pablo Gomez
+Juan Pablo Gomez Socha
+
