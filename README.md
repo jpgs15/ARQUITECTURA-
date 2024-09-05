@@ -69,5 +69,5 @@ c1, c2 y c3 se utilizan para conectar los acarreos entre los sumadores.
 
 El sumador de 4 bits se construye utilizando cuatro instancias del módulo sum1b, que implementa un sumador completo de 1 bit.           
 
-ste diseño implementa un sumador en cadena. La suma comienza en el bit menos significativo (A[0] y B[0]), y el acarreo resultante de esta suma (c1) se pasa al siguiente bit (A[1] y B[1]). Esto se repite para todos los bits, hasta llegar al bit más significativo (A[3] y B[3]), donde el acarreo de salida final (Cout) es generado.
+Este diseño implementa un sumador en cadena. La suma comienza en el bit menos significativo (A[0] y B[0]), y el acarreo resultante de esta suma (c1) se pasa al siguiente bit (A[1] y B[1]). Esto se repite para todos los bits, hasta llegar al bit más significativo (A[3] y B[3]), donde el acarreo de salida final (Cout) es generado.
 
