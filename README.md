@@ -38,4 +38,6 @@ result = A+B+Ci;
 <p align="center">
  <img src="../IMAGENES/tabdever.png" alt="tabla de dervdad" width=300 >
 </p>
-A partir de la tabla de verdad vamos a comprobar por medio de la simulación se fueron verificando tanto las entradas y salidas y así comprobar que lo que se representó en la tabla de verdad en la simulación también funcionara de la misma manera luego se realizo la carga a la FPGA 
+A partir de la tabla de verdad vamos a comprobar por medio de la simulación se fueron verificando tanto las entradas y salidas y así comprobar que lo que se representó en la tabla de verdad en la simulación también funcionara de la misma manera luego se realizo la carga a la FPGA.
+
+## Sumador 4 BITS 
