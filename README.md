@@ -38,3 +38,4 @@ result = A+B+Ci;
 <p align="center">
  <img src="../IMAGENES/tabdever.png" alt="tabla de dervdad" width=300 >
 </p>
+A partir de la tabla de verdad vamos a comprobar por medio de la simulación
