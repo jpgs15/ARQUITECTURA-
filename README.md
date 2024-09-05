@@ -39,6 +39,9 @@ result = A+B+Ci;
  <img src="../IMAGENES/tabdever.png" alt="tabla de dervdad" width=300 >
 </p>
 A partir de la tabla de verdad vamos a comprobar por medio de la simulación se fueron verificando tanto las entradas y salidas y así comprobar que lo que se representó en la tabla de verdad en la simulación también funcionara de la misma manera luego se realizo la carga a la FPGA.
+<p align="center">
+ <img src="../IMAGENES/simu.png" alt="Simulacion" width=300 >
+</p>
 
 ## Sumador 4 BITS 
  El sumador está compuesto de cuatro módulos más pequeños, llamados sum1b, que implementan un sumador completo de 1 bit (también conocido como full adder). El objetivo de este sumador de 4 bits es sumar dos números binarios de 4 bits (A y B), generando una salida de 4 bits (Sum) y un acarreo de salida (Cout).
