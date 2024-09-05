@@ -5,8 +5,9 @@
 ## Sumador 1 BIT 
 el siguiente codigo representa un sumador de 1 bit
 
-<img scr="IMAGENES/" alt="IMG1.png">
+<img scr="IMAGENES/IMG1.png" alt="img1">
 
 <div class="img1">
 
-hola
+
+
