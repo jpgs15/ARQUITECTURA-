@@ -34,7 +34,7 @@ result = A+B+Ci;
     end   
  Este bloque es un bloque combinacional. El código dentro de always@ se ejecuta siempre que cambie alguna de las entradas (A, B, Ci) Dentro del bloque, la suma de A, B y Ci se asigna a result. Como el tamaño de result es de 2 bits, el bit menos significativo de esta suma será la salida Sum, y el bit más significativo será la salida Cout. 
 
- #### Simulación   
+ #### Tabla de verdad sumador de 1 bit    
 <p align="center">
- <img src="../IMAGENES/simu1.png" alt="simulación" width=300 >
+ <img src="../IMAGENES/tabdever.png" alt="tabla de dervdad" width=300 >
 </p>
