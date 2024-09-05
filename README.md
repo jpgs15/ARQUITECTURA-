@@ -5,6 +5,6 @@
 ## Sumador 1 BIT 
 el siguiente codigo representa un sumador de 1 bit
 
-![imagen1]
+![imagen1]C:\Users\pablo\OneDrive\Documentos\arquitecturapro\imagenes
 
 
