@@ -5,6 +5,6 @@
 ## Sumador 1 BIT 
 el siguiente codigo representa un sumador de 1 bit
 
-![fpga](../figs/imagen1.png)
+![imagen1](../figs/imagen1.png)
 
 
