@@ -48,8 +48,24 @@ A partir de la tabla de verdad vamos a comprobar por medio de la simulación se 
         input  [3:0] B,   
         output Cout,      
         output [3:0] Sum    
-    );   s
+    );   
 El módulo sum4b tiene dos entradas de 4 bits (A y B), una salida de acarreo (Cout), y una salida de suma de 4 bits (Sum).
 A y B son los dos números de 4 bits que se van a sumar.
 Sum es el resultado de la suma.
 Cout es el acarreo de salida que se produce si la suma de los 4 bits genera un acarreo adicional.
+#### Declaración de cables para los acarreo internos:
+  wire c1,c2,c3;  
+  wire c_out; 
+
+Los cables (wire) almacenan los acarreos intermedios generados por cada sumador de 1 bit. El acarreo de un sumador se pasa como entrada al siguiente.
+c1, c2 y c3 se utilizan para conectar los acarreos entre los sumadores.
+#### Instanciación de los sumadores de 1 bit
+
+
+  sum1b s0 (.A(A[0]), .B(B[0]), .Ci(1'b0),  .Cout(c1) ,.Sum(Sum[0]));
+  sum1b s1 (.A(A[1]), .B(B[1]), .Ci(c1), .Cout(c2) ,.Sum(Sum[1]));
+  sum1b s2 (.A(A[2]), .B(B[2]), .Ci(c2), .Cout(c3) ,.Sum(Sum[2]));
+  sum1b s3 (.A(A[3]), .B(B[3]), .Ci(c3), .Cout(Cout) ,.Sum(Sum[3]));     
+  
+El sumador de 4 bits se construye utilizando cuatro instancias del módulo sum1b, que implementa un sumador completo de 1 bit.
+
