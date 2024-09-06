@@ -77,4 +77,29 @@ Este diseño implementa un sumador en cadena. La suma comienza en el bit menos s
  implementa un multiplicador secuencial para multiplicar dos números de 3 bits. El multiplicador utiliza una Máquina de Estados Finitos (FSM) para controlar las diferentes etapas del cálculo de la multiplicación, y realiza la operación de forma secuencial desplazando y sumando productos parciales.
 
  #### Entradas y salidas
+clk: Señal de reloj que sincroniza el proceso secuencial.   
+init: Señal de inicialización que comienza la operación de multiplicación.   
+MR: Multiplicando de 3 bits.   
+MD: Multiplicador de 3 bits.  
+done: Señal que indica cuándo ha terminado la multiplicación.  
+pp: Producto parcial acumulado (resultado de la multiplicación de 6 bits).
 
+#### Registros internos:
+sh: Señal para controlar el desplazamiento de registros.  
+rst: Señal de reinicio que inicializa los registros.  
+add: Señal que controla cuándo se realiza la suma de productos parciales.  
+A: Registro de 6 bits que almacena el multiplicador desplazado.  
+B: Registro de 3 bits que almacena el multiplicando (parte que se desplaza).  
+z: Señal que indica cuándo el registro B ha alcanzado 0, es decir, cuándo se ha completado el ciclo de multiplicación.    
+status: Estado actual de la FSM, que controla las diferentes etapas del proceso.
+
+#### Estados de la FSM:
+La FSM tiene cinco estados que controlan el flujo de la multiplicación:
+
+START: Inicialización del sistema.  
+CHECK: Verifica si el bit menos significativo de B es 1 para decidir si se debe sumar.  
+ADD: Realiza la suma de los productos parciales.  
+SHIFT: Desplaza los registros A y B y verifica si se ha completado la multiplicación.  
+END1: Indica que la multiplicación ha finalizado.
+
+#### Estado inicial
