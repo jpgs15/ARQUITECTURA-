@@ -122,7 +122,8 @@ La señal done se activa, indicando que la operación ha finalizado, y la FSM re
 #### Funcionamiento:
 La multiplicación comienza cuando se activa la señal init. 
 Se comprueba si el bit menos significativo del multiplicando B es 1:    
--Si es 1, el valor de A se suma al producto parcial pp.
+-Si es 1, el valor de A se suma al producto parcial pp. 
+
 -Luego, los registros A y B se desplazan.     
 Este proceso se repite hasta que B se convierte en 0, lo que indica que la multiplicación ha finalizado y la señal done se activa.   
 Este algoritmo es una implementación del algoritmo de multiplicación por desplazamiento y suma.
