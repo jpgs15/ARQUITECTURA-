@@ -74,7 +74,7 @@ El sumador de 4 bits se construye utilizando cuatro instancias del módulo sum1b
 
 Este diseño implementa un sumador en cadena. La suma comienza en el bit menos significativo (A[0] y B[0]), y el acarreo resultante de esta suma (c1) se pasa al siguiente bit (A[1] y B[1]). Esto se repite para todos los bits, hasta llegar al bit más significativo (A[3] y B[3]), donde el acarreo de salida final (Cout) es generado.
 ## Multiplicador
- implementa un multiplicador secuencial para multiplicar dos números de 3 bits. El multiplicador utiliza una Máquina de Estados Finitos (FSM) para controlar las diferentes etapas del cálculo de la multiplicación, y realiza la operación de forma secuencial desplazando y sumando productos parciales.
+ El multiplicador utiliza una Máquina de Estados Finitos (FSM) para controlar las diferentes etapas del cálculo de la multiplicación, y realiza la operación de forma secuencial desplazando y sumando productos parciales.
 
  #### Entradas y salidas
 clk: Señal de reloj que sincroniza el proceso secuencial.   
@@ -103,3 +103,29 @@ SHIFT: Desplaza los registros A y B y verifica si se ha completado la multiplica
 END1: Indica que la multiplicación ha finalizado.
 
 #### Estado inicial
+
+initial begin  
+        status = START;   
+        rst = 1'b0;  
+        pp = 6'b0;  
+        A = 6'b0;  
+        B = 3'b0;   
+    end
+Al inicio, el estado de la FSM se coloca en START y todas las señales de control (rst, pp, A, B) se inicializan en 0.  
+Si la señal init es 1, se pasa al estado CHECK.
+Se prepara para iniciar la multiplicación y se resetean las señales.   
+Se verifica si el bit menos significativo de B es 1. Si es 1, se pasa al estado ADD (para sumar el valor de A al producto parcial); de lo contrario, se pasa al estado SHIFT.  
+i el bit menos significativo de B es 1, se suma el valor de A al producto parcial pp.  
+Se desplaza el registro A hacia la izquierda y el registro B hacia la derecha.
+Si B llega a 0 (z == 1), la multiplicación termina y se pasa al estado END1.  
+La señal done se activa, indicando que la operación ha finalizado, y la FSM regresa al estado START.
+#### Funcionamiento:
+La multiplicación comienza cuando se activa la señal init. 
+Se comprueba si el bit menos significativo del multiplicando B es 1:    
+-Si es 1, el valor de A se suma al producto parcial pp.
+-Luego, los registros A y B se desplazan.     
+Este proceso se repite hasta que B se convierte en 0, lo que indica que la multiplicación ha finalizado y la señal done se activa.   
+Este algoritmo es una implementación del algoritmo de multiplicación por desplazamiento y suma.
+
+
+         
