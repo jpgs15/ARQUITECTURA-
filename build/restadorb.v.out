@@ -1,0 +1,38 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000228ac802ce0 .scope module, "restador_binario" "restador_binario" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 4 "Resultado";
+    .port_info 3 /OUTPUT 1 "Borrow";
+o00000228ac836fd8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v00000228ac8034b0_0 .net "A", 3 0, o00000228ac836fd8;  0 drivers
+o00000228ac837008 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v00000228ac5eef00_0 .net "B", 3 0, o00000228ac837008;  0 drivers
+v00000228ac802e70_0 .net "Borrow", 0 0, L_00000228ac833230;  1 drivers
+v00000228ac802f10_0 .net "Resultado", 3 0, L_00000228ac8332d0;  1 drivers
+L_00000228ac87bc80 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000228ac802fb0_0 .net *"_ivl_10", 0 0, L_00000228ac87bc80;  1 drivers
+v00000228ac803050_0 .net *"_ivl_11", 4 0, L_00000228ac833b40;  1 drivers
+v00000228ac833050_0 .net *"_ivl_3", 4 0, L_00000228ac833370;  1 drivers
+L_00000228ac87bc38 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000228ac8330f0_0 .net *"_ivl_6", 0 0, L_00000228ac87bc38;  1 drivers
+v00000228ac833190_0 .net *"_ivl_7", 4 0, L_00000228ac833410;  1 drivers
+L_00000228ac833230 .part L_00000228ac833b40, 4, 1;
+L_00000228ac8332d0 .part L_00000228ac833b40, 0, 4;
+L_00000228ac833370 .concat [ 4 1 0 0], o00000228ac836fd8, L_00000228ac87bc38;
+L_00000228ac833410 .concat [ 4 1 0 0], o00000228ac837008, L_00000228ac87bc80;
+L_00000228ac833b40 .arith/sub 5, L_00000228ac833370, L_00000228ac833410;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Restador\restadorb.v";
