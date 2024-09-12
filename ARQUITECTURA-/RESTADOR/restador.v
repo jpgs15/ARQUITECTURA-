@@ -1,9 +1,9 @@
 `include "sum4b.v"
 module restador(
     input [3:0] a,       // entrada 1 de 4 bits
-    input [3:0] b,       // entrada 2 de 4 bits
+    input [3:0] b,       // entrada 2 de 4 bitss
     input sel,           // selector
-    output Cout,    //  acarreo salida de cada bit.
+    output Cout,    //  acarreo salida de cada bit.h
     output [3:0] Rest  // resta salida
 );
     // Señal interna para el acarreo de salida de cada bit
